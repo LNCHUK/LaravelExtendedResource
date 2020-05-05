@@ -10,7 +10,6 @@
         }
     ],
     "require": {
-        "phpunit/phpunit": "^8.5"
     },
     "autoload": {
         "psr-4": {
@@ -23,7 +22,8 @@
         }
     },
     "require-dev": {
-        "orchestra/testbench": "5.0"
+        "orchestra/testbench": "5.0",
+        "phpunit/phpunit": "^8.5"
     },
     "extra": {
         "laravel": {

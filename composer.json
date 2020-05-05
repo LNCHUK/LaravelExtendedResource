@@ -1,0 +1,28 @@
+{
+    "name": "lnchuk/laravel-extended-resource",
+    "description": "A Laravel package to provide extended resource routes, including deleted records, restoring records and confirmation of deletes",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Tom Lynch",
+            "email": "tom@lnch.co.uk"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "LNCHUK\\LaravelExtendedResource\\": "src/"
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "5.0"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "LNCHUK\\LaravelExtendedResource\\LaravelExtendedResourceServiceProvider"
+            ]
+        }
+    }
+}

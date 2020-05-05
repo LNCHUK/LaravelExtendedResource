@@ -9,10 +9,17 @@
             "email": "tom@lnch.co.uk"
         }
     ],
-    "require": {},
+    "require": {
+        "phpunit/phpunit": "^8.5"
+    },
     "autoload": {
         "psr-4": {
             "LNCHUK\\LaravelExtendedResource\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LNCHUK\\LaravelExtendedResource\\Tests\\": "tests/"
         }
     },
     "require-dev": {

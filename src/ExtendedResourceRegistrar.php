@@ -12,8 +12,8 @@ class ExtendedResourceRegistrar extends ResourceRegistrar
      * @var array
      */
     protected $resourceDefaults = [
-        'index', 'create', 'store', 'show', 'edit', 'update',
-        'delete', 'destroy', 'trashed', 'restore',
+        'index', 'trashed', 'create', 'store', 'show', 'edit',
+        'update', 'delete', 'destroy', 'restore',
     ];
 
     /**

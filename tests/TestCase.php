@@ -2,6 +2,7 @@
 
 namespace LNCHUK\LaravelExtendedResource\Tests;
 
+use LNCHUK\LaravelExtendedResource\Helpers\ExtendedResource;
 use LNCHUK\LaravelExtendedResource\LaravelExtendedResourceServiceProvider;
 
 class TestCase extends \Orchestra\Testbench\TestCase
@@ -20,6 +21,6 @@ class TestCase extends \Orchestra\Testbench\TestCase
 
     public function getEnvironmentSetup($app)
     {
-        // environment setup
+        ExtendedResource::init();
     }
 }

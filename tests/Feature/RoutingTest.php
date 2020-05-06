@@ -2,6 +2,7 @@
 
 namespace LNCHUK\LaravelExtendedResource\Tests\Feature;
 
+use Illuminate\Routing\Exceptions\UrlGenerationException;
 use Illuminate\Support\Facades\Route;
 use LNCHUK\LaravelExtendedResource\Tests\ProductsController;
 use LNCHUK\LaravelExtendedResource\Tests\TestCase;
@@ -46,7 +47,6 @@ class RoutingTest extends TestCase
     {
         $route = Route::getRoutes()->getByName('products.trashed')->getActionName();
         $action = substr($route, strpos($route, '@') + 1);
-
         $this->assertEquals($action, 'trashed');
     }
 
@@ -82,8 +82,19 @@ class RoutingTest extends TestCase
     {
         $route = Route::getRoutes()->getByName('products.delete')->getActionName();
         $action = substr($route, strpos($route, '@') + 1);
-
         $this->assertEquals($action, 'delete');
+    }
+
+    /**
+     * Tests that the delete route must have an identifier passed to
+     * the route to identify the record pending deletion.
+     *
+     * @test
+     */
+    public function the_delete_route_requires_an_identifier(): void
+    {
+        $this->expectException(UrlGenerationException::class);
+        $this->get(route('products.delete'));
     }
 
     /**
@@ -118,7 +129,18 @@ class RoutingTest extends TestCase
     {
         $route = Route::getRoutes()->getByName('products.restore')->getActionName();
         $action = substr($route, strpos($route, '@') + 1);
-
         $this->assertEquals($action, 'restore');
+    }
+
+    /**
+     * Tests that the restore route must have an identifier passed to
+     * the route to identify the record being restored.
+     *
+     * @test
+     */
+    public function the_restore_route_requires_an_identifier(): void
+    {
+        $this->expectException(UrlGenerationException::class);
+        $this->get(route('products.restore'));
     }
 }

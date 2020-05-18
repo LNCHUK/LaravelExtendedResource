@@ -31,5 +31,8 @@
                 "LNCHUK\\LaravelExtendedResource\\LaravelExtendedResourceServiceProvider"
             ]
         }
+    },
+    "scripts": {
+        "test": "phpunit"
     }
 }

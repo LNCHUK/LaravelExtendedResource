@@ -21,8 +21,8 @@ Testing and support will soon be added for older versions of Laravel.
 
 First, install the package via composer.
 
-```
-composer require lnchuk/laravel-extended-resource
+``` bash
+$ composer require lnchuk/laravel-extended-resource
 ```
 
 ## Usage
@@ -55,15 +55,28 @@ Please view the [CHANGELOG](CHANGELOG.md) for details of what has been changed b
 
 To run the included tests, a composer script is added to run the PHPUnit tests.
 
-```composer test```
+``` bash  
+$ composer test
+```
 
 ## Contributing
 
+Please see [CONTRIBUTING](CONTRIBUTING.md) for details on contributing to this package.
+
 ## Security
 
+If you find any security related issues with this package, please contact security@lnch.co.uk with details of the issue
+instead of using the GitHub issues tracker.
+
 ## Accreditation
+
+This package is 100% free to use for all projects, both personal and commercial. 
+
+If you do use the package and like what it brings to your project, we'd love to hear
+from you. We're 
 
 ## Credits
 
 ## Licence
 
+The MIT License (MIT). Please see License File for more information.

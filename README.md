@@ -8,7 +8,7 @@ The package adds the following routes to the resource method;
 Route | Controller Method | Purpose
 ----- | ----------------- | -------
 GET /trashed | trashed() | Displays all soft deleted models
-POST /model/{model}/restore | restore(Model $model) | Restore a soft deleted model
+PATCH /model/{model}/restore | restore(Model $model) | Restore a soft deleted model
 GET /model/{model}/delete | delete(Model $model) | Precursor for the destroy route, to confirm deletion of the model
 
 ## Support

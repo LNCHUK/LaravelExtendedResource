@@ -15,7 +15,7 @@ class ExtendedResource
             return new ExtendedResourceRegistrar(app()->make(Router::class));
         });
 
-        app()->extend('command.make.controller', function () {
+        app()->extend('command.controller.make', function () {
             return new ExtendedControllerMakeCommand;
         });
     }

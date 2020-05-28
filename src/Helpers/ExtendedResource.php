@@ -2,6 +2,7 @@
 
 namespace LNCHUK\LaravelExtendedResource\Helpers;
 
+use Illuminate\Filesystem\Filesystem;
 use Illuminate\Routing\ResourceRegistrar;
 use Illuminate\Routing\Router;
 use LNCHUK\LaravelExtendedResource\Commands\ExtendedControllerMakeCommand;
@@ -16,7 +17,7 @@ class ExtendedResource
         });
 
         app()->extend('command.controller.make', function () {
-            return new ExtendedControllerMakeCommand;
+            return new ExtendedControllerMakeCommand(new Filesystem());
         });
     }
 }

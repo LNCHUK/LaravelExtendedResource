@@ -12,11 +12,11 @@ class ExtendedResource
 {
     public static function init()
     {
-        app()->bind(ResourceRegistrar::class, function () {
+        app()->bind(ResourceRegistrar::class, function() {
             return new ExtendedResourceRegistrar(app()->make(Router::class));
         });
 
-        app()->extend('command.controller.make', function () {
+        app()->extend('command.controller.make', function() {
             return new ExtendedControllerMakeCommand(new Filesystem());
         });
     }

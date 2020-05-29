@@ -39,7 +39,7 @@ class ExtendedResourceRegistrar extends ResourceRegistrar
      */
     protected function addResourceTrashed($name, $base, $controller, $options)
     {
-        $uri = $this->getResourceUri($name) . '/trashed';
+        $uri = $this->getResourceUri($name).'/trashed';
 
         $action = $this->getResourceAction($name, $controller, 'trashed', $options);
 

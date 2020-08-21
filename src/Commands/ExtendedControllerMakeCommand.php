@@ -18,7 +18,7 @@ class ExtendedControllerMakeCommand extends ControllerMakeCommand
 
         if ($this->option('extended-resource')) {
             $stub = '/stubs/controller.extended.stub';
-        } elseif ($this->option('model')) {
+        } elseif ($this->option('extended-resource') && $this->option('model')) {
             $stub = '/stubs/controller.extended-model.stub';
         }
 

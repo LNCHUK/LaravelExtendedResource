@@ -95,11 +95,11 @@ class {{ class }} extends Controller
     }
 
     /**
-     * Display a listing of the trashed resources.
+     * Display a listing of the deleted resources.
      *
      * @return \Illuminate\Http\Response
      */
-    public function trashed()
+    public function deleted()
     {
         //
     }

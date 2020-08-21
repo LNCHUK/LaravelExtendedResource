@@ -12,7 +12,7 @@ class ExtendedResourceRegistrar extends ResourceRegistrar
      * @var array
      */
     protected $resourceDefaults = [
-        'index', 'trashed', 'create', 'store', 'show', 'edit',
+        'index', 'deleted', 'create', 'store', 'show', 'edit',
         'update', 'delete', 'destroy', 'restore',
     ];
 
@@ -29,7 +29,7 @@ class ExtendedResourceRegistrar extends ResourceRegistrar
     ];
 
     /**
-     * Add the trashed method for a resourceful route.
+     * Add the deleted method for a resourceful route.
      *
      * @param string  $name
      * @param string  $base
@@ -37,11 +37,11 @@ class ExtendedResourceRegistrar extends ResourceRegistrar
      * @param array   $options
      * @return \Illuminate\Routing\Route
      */
-    protected function addResourceTrashed($name, $base, $controller, $options)
+    protected function addResourceDeleted($name, $base, $controller, $options)
     {
-        $uri = $this->getResourceUri($name).'/trashed';
+        $uri = $this->getResourceUri($name).'/deleted';
 
-        $action = $this->getResourceAction($name, $controller, 'trashed', $options);
+        $action = $this->getResourceAction($name, $controller, 'deleted', $options);
 
         return $this->router->get($uri, $action);
     }
